@@ -61,25 +61,26 @@ html, body {
 /* Rectangles Section Styling */
 .rectangles {
   display: flex;
-  justify-content: space-between;
-  margin-top: 35px; /* Moved the rectangles up by reducing the top margin */
-  padding: 0 20px;
-  flex-wrap: wrap; /* Allow rectangles to wrap */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between; /* Even spacing on larger screens */
+  gap: 20px; /* Add consistent spacing between all rectangles */
+  margin-top: 20px;
+  padding: 0 10px;
 }
 
 .rectangle {
-  width: 48%; /* Adjust width of rectangles to fit 2x2 */
-  height: 330px; /* Adjust height for mobile */
+  flex: 1 1 calc(48% - 20px); /* 48% width minus gap on larger screens */
+  max-width: 48%; /* Ensure max-width for larger screens */
+  height: auto; /* Adjust dynamically */
   background: rgba(50, 50, 50, 0.8); /* Semi-transparent dark background */
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   color: #f0f0f0;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the content vertically */
-  text-align: center;
-  margin-bottom: 20px; /* Space between rows */
+  justify-content: center;
 }
 
 .rectangle h3 {
@@ -95,7 +96,7 @@ html, body {
   text-align: center;
 }
 
-/* Media Query for Smaller Devices (Mobile) */
+/* Media Query for Mobile */
 @media screen and (max-width: 768px) {
   /* Adjust main card styling for smaller screens */
   .card {
@@ -113,18 +114,13 @@ html, body {
 
   /* Rectangles Section Styling for Mobile */
   .rectangles {
-    flex-wrap: wrap; /* Allow rectangles to wrap */
-    margin-top: -50px; /* Move the rectangles up on mobile screens */
+    gap: 15px; /* Smaller gap on mobile */
     justify-content: center; /* Center the rectangles */
-    padding: 0 10px;
   }
 
-  /* Rectangle styling for mobile */
   .rectangle {
-    width: 44%; /* Adjust width of rectangles to fit 2x2, leave some space */
-    height: 310px; /* Keep the height as is */
-    margin: 10px 3%; /* Add horizontal margin for space between rectangles */
-    padding: 15px; /* Adjust padding to make the content fit */
+    flex: 1 1 100%; /* Full width on mobile */
+    margin: 0 auto; /* Center each rectangle */
   }
 
   .rectangle h3 {
@@ -136,4 +132,3 @@ html, body {
     font-size: 16px; /* Adjust description size for mobile */
   }
 }
-
