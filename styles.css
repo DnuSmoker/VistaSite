@@ -96,14 +96,17 @@ html, body {
   text-align: center;
 }
 
+<<<<<<< HEAD
 /* Media Query for Mobile */
+=======
+>>>>>>> 7c28f4bdd432c7a921131938317d27e59046cc91
 @media screen and (max-width: 768px) {
-  /* Adjust main card styling for smaller screens */
   .card {
-    width: 90%; /* Increase card width for mobile */
+    width: 90%; /* Already set to 90% */
+    padding: 1.5em; /* Reduce padding slightly */
     margin: 5vh auto;
-    padding: 2em;
   }
+}
 
   /* Adjust the <p> tag for mobile */
   .card p {
