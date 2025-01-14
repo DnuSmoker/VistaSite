@@ -50,7 +50,7 @@ html, body {
 #countdown {
   font-size: 50px;
   font-weight: bold;
-  color: #000000; /* Light blue */
+  color: #3cdfff; /* Light blue */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   background: #006e7f; /* Darker blue background */
   padding: 10px 20px;
