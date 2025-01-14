@@ -30,7 +30,7 @@ html, body {
 
 .card h1 {
   font-size: 70px; /* Adjust the size */
-  color: #3cdfff; /* Light blue color */
+  color: #ffffff; /* Light blue color */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px; /* Adjust bottom margin if needed */
   line-height: 1.2; /* Control the line height to avoid excess space */
