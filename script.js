@@ -23,6 +23,56 @@ const countdownInterval = setInterval(() => {
   }
 }, 1000);
 
+// Countdown for countdownsite
+function updateCountdownSite() {
+  const countdownSiteElement = document.getElementById('countdownsite');
+  const targetDateSite = new Date('January 17, 2025 20:00:00 GMT+0200').getTime(); // Bucharest timezone
+
+  function updateTime() {
+    const now = new Date().getTime();
+    const timeLeft = targetDateSite - now;
+
+    if (timeLeft > 0) {
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      countdownSiteElement.textContent = `${days}d ${hours.toString().padStart(2, '0')}h:${minutes.toString().padStart(2, '0')}m:${seconds.toString().padStart(2, '0')}s`;
+    } else {
+      countdownSiteElement.textContent = "00d 00h:00m:00s"; // Countdown finished
+    }
+  }
+
+  setInterval(updateTime, 1000);
+}
+
+updateCountdownSite();
+
+// Countdown for countdownpublic
+function updateCountdownPublic() {
+  const countdownPublicElement = document.getElementById('countdownpublic');
+  const targetDatePublic = new Date('February 1, 2025 20:00:00 GMT+0200').getTime(); // Bucharest timezone
+
+  function updateTime() {
+    const now = new Date().getTime();
+    const timeLeft = targetDatePublic - now;
+
+    if (timeLeft > 0) {
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      countdownPublicElement.textContent = `${days}d ${hours.toString().padStart(2, '0')}h:${minutes.toString().padStart(2, '0')}m:${seconds.toString().padStart(2, '0')}s`;
+    } else {
+      countdownPublicElement.textContent = "00d 00h:00m:00s"; // Countdown finished
+    }
+  }
+
+  setInterval(updateTime, 1000);
+}
+
+updateCountdownPublic();
+
 // Background Animation: Reactive Gradient Effect based on Mouse Position
 document.addEventListener('mousemove', (event) => {
   const x = event.clientX / window.innerWidth; // Horizontal position (0 to 1)

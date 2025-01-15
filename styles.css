@@ -58,6 +58,28 @@ html, body {
   display: inline-block;
 }
 
+#countdownsite {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ff4d4d; /* Red color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  background: #7f0000; /* Dark red background */
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#countdownpublic {
+  font-size: 50px;
+  font-weight: bold;
+  color: #00ff48; /* Red color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  background: #007f0d; /* Dark red background */
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
 /* Rectangles Section Styling */
 .rectangles {
   display: flex;
