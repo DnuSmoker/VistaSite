@@ -289,10 +289,13 @@ img[src="Earth.jpg"] {
 /* Media Query for Mobile */
 @media screen and (max-width: 768px) {
   #countdown, #countdownsite, #countdownpublic {
-    font-size: 25px; /* Smaller font for mobile */
-    padding: 8px 15px; /* Adjust padding for mobile */
-    width: 58%; /* Make countdowns more flexible on mobile */
-    margin: 10px auto; /* Center them horizontally */
+    position: relative; /* Make the countdown container relative for better control */
+    font-size: 25px; /* Smaller font size for mobile */
+    padding: 8px 15px; /* Adjust padding for better fit */
+    width: 70%; /* Ensure countdowns fit on smaller screens */
+    margin: 15px auto; /* Center them horizontally */
+    text-align: center; /* Center text in countdowns */
+    background-size: contain; /* Ensure background fits properly */
   }
   
   .card {
