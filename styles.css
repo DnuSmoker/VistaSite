@@ -298,7 +298,7 @@ img[src="Earth.jpg"] {
   .card {
     width: 90%; /* Responsive width for smaller screens */
     padding: 2.5em; /* Reduce padding slightly */
-    margin: 25vh auto;
+    margin: 25vh auto; /* Adjust margin for better positioning */
   }
 
   .card h1 {
@@ -317,7 +317,7 @@ img[src="Earth.jpg"] {
 
   .rectangles {
     justify-content: center; /* Center the rectangles */
-    margin-top: 320px;
+    margin-top: 320px; /* Adjusted margin for smaller screens */
   }
 
   .rectangle {
@@ -336,19 +336,19 @@ img[src="Earth.jpg"] {
 
   /* Image Container Styling */
   .image-container {
-   text-align: center; /* Center the container */
-   margin: 60px 0; /* 20px spacing on top and bottom of the container */
+    text-align: center; /* Center the container */
+    margin: 60px 0; /* Adjusted spacing on top and bottom of the container */
   }
 
   /* Image Item Styling */
   .image-item {
-   display: inline-block; /* Each image block behaves like inline-block */
-   margin: 0 10px; /* Add 10px margin to space out the images horizontally */
+    display: inline-block; /* Each image block behaves like inline-block */
+    margin: 0 10px; /* Add spacing between images horizontally */
   }
 
   /* Image Styling */
   .image-container a img {
-   width: 60px; /* Fixed image size */
-   height: auto; /* Maintain aspect ratio */
+    width: 60px; /* Reduced image size */
+    height: auto; /* Maintain aspect ratio */
   }
 }
