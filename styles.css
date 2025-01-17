@@ -54,7 +54,6 @@ html, body {
 
 .card h2 {
   color: #ffffff;
-  font-size: 0px;
 }
 
 .card p {
@@ -65,12 +64,14 @@ html, body {
 }
 
 .timer {
-  margin-top: 2em;
+  margin-top: 1em;
   text-align: center;
 }
 
 .timer h2 {
   font-size: 28px;
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 /* Default styles for countdown elements */
@@ -305,16 +306,16 @@ img[src="Earth.jpg"] {
   }
 
   .card h1 {
-    font-size: 50px; /* Smaller font size for smaller screens */
+    font-size: 40px; /* Smaller font size for smaller screens */
   }
 
   .card h2 {
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .card p {
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 15px; /* Adjust font size for smaller screens */
     line-height: 1.5;
   }
 
@@ -353,5 +354,10 @@ img[src="Earth.jpg"] {
   .image-container a img {
    width: 40px; /* Fixed image size */
    height: auto; /* Maintain aspect ratio */
+  }
+
+  .timer h2 {
+    margin-bottom: -10px;
+    margin-top: 10px;
   }
 }
