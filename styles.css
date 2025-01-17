@@ -9,7 +9,6 @@ html, body {
   height: 100%;
   overflow: auto; /* Enable scrolling when content overflows */
   font-family: 'Poppins', sans-serif;
-  color: #ffffff;
   background: url('EarthMap.png') no-repeat center center fixed; /* Fullscreen background image */
   background-size: cover; /* Ensure the image covers the full screen */
 }
@@ -17,67 +16,97 @@ html, body {
 /* Main Card Styling */
 .card {
   position: relative;
-  margin: 3vh auto;
+  margin: 16vh auto;
   padding: 4em;
   width: 735px;
   max-width: 90%; /* Make it responsive for smaller screens */
-  background: rgba(50, 50, 50, 0.7); /* Semi-transparent dark background for the card */
+  background: rgba(0, 48, 58, 0.8); /* Semi-transparent dark background for the card */
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  transition: box-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  box-shadow: 0 0 50px rgba(60, 223, 255, 0.8), 
+              0 0 50px rgba(60, 223, 255, 0.6), 
+              0 0 50px rgba(60, 223, 255, 0.4); /* Glowing effect */
   z-index: 1;
+}
+.card:hover {
+  background: rgba(75, 0, 90, 0.8); /* Semi-transparent dark background for the card */
+  box-shadow: 0 0 50px rgba(195, 60, 255, 0.8), 
+              0 0 50px rgba(195, 60, 255, 0.6), 
+              0 0 50px rgba(195, 60, 255, 0.4); /* Glowing effect */
+}
+.card:hover h1 {
+  color: #b649ff;
+  transform: scale(1.05);
+}
+.card:hover p {
+  color: #e97eff;
 }
 
 .card h1 {
   font-size: 70px; /* Adjust the size */
-  color: #3cdfff; /* Light blue color */
+  color: #50e2ff; /* Light blue color */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px; /* Adjust bottom margin if needed */
   line-height: 1.2; /* Control the line height to avoid excess space */
+  transition: 0.15s ease-in-out;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-size: 0px;
 }
 
 .card p {
   font-size: 23px;
   line-height: 1.6;
-  color: #f0f0f0;
+  color: #c2f5ff;
+  transition: 0.15s ease-in-out;
 }
 
 .timer {
-  margin-top: 1em;
+  margin-top: 2em;
   text-align: center;
 }
 
-#countdown {
+.timer h2 {
+  font-size: 28px;
+}
+
+/* Default styles for countdown elements */
+#countdown, #countdownsite, #countdownpublic {
   font-size: 50px;
   font-weight: bold;
-  color: #3cdfff; /* Light blue */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  background: #006e7f; /* Darker blue background */
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 8px 20px;
+  border-radius: 50px;
   display: inline-block;
+  text-align: center; /* Center text in countdowns */
+}
+
+#countdown {
+  margin-bottom: 30px;
+  color: #3cdfff;
+  box-shadow: 0 0 10px rgba(60, 223, 255, 0.8), 
+              0 0 10px rgba(60, 223, 255, 0.6), 
+              0 0 10px rgba(60, 223, 255, 0.4);
+  background: #006e7f;
 }
 
 #countdownsite {
-  font-size: 50px;
-  font-weight: bold;
-  color: #ff4d4d; /* Red color */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  background: #7f0000; /* Dark red background */
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
+  margin-bottom: 30px;
+  color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255, 60, 60, 0.8), 
+              0 0 10px rgba(255, 60, 60, 0.6), 
+              0 0 10px rgba(255, 60, 60, 0.4);
+  background: #7f0000;
 }
 
 #countdownpublic {
-  font-size: 50px;
-  font-weight: bold;
-  color: #00ff48; /* Red color */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  background: #007f0d; /* Dark red background */
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
+  color: #00ff48;
+  box-shadow: 0 0 10px rgba(86, 255, 60, 0.8), 
+              0 0 10px rgba(86, 255, 60, 0.6),
+              0 0 10px rgba(86, 255, 60, 0.4);
+  background: #007f0d;
 }
 
 /* Rectangles Section Styling */
@@ -86,18 +115,20 @@ html, body {
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: space-between; /* Even spacing on larger screens */
   gap: 20px; /* Add consistent spacing between all rectangles */
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 0 10px;
 }
 
 .rectangle {
-  flex: 1 1 calc(48% - 20px); /* 48% width minus gap on larger screens */
-  max-width: 48%; /* Ensure max-width for larger screens */
-  background: rgba(50, 50, 50, 0.8); /* Semi-transparent dark background */
+  flex: 1 1 calc(50% - 20px); /* 48% width minus gap on larger screens */
+  max-width: 50%; /* Ensure max-width for larger screens */
+  background: rgba(0, 48, 58, 0.8); /* Semi-transparent dark background */
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  color: #f0f0f0;
+  box-shadow: 0 0 15px rgba(60, 223, 255, 0.8), 
+              0 0 15px rgba(60, 223, 255, 0.6), 
+              0 0 15px rgba(60, 223, 255, 0.4);
+  color: #ffffff;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -106,27 +137,177 @@ html, body {
 
 .rectangle h3 {
   font-size: 48px; /* Default size */
-  color: #3cdfff; /* Light blue title */
+  color: #50e2ff;
   margin-bottom: 10px;
 }
 
 .rectangle p {
   font-size: 20px; /* Smaller description text */
+  font-weight: bold;
   line-height: 1.4;
-  color: #f0f0f0;
+  color: #c2f5ff;
   text-align: center;
+}
+
+/* Styles for the Earth.jpg image */
+img[src="Earth.jpg"] {
+  display: inline-block; /* Makes the div behave like an inline element */
+  cursor: pointer; /* Shows a pointer cursor on hover */
+  position: fixed; /* Keeps the image fixed in the viewport */
+  top: 25px; /* Adds a small distance from the top */
+  right: 25px; /* Adds a small distance from the right */
+  width: 100px; /* Sets a smaller width */
+  height: auto; /* Maintains the aspect ratio */
+  z-index: 999; /* Ensures the mage stays on top of other elements */
+  border-radius: 10px; /* Optional: adds slight rounding for a polished look */
+}
+
+/* Image button positioning */
+.image-button img {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 100px;
+  height: auto;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  height: 88%; /* Full height of the viewport */
+  width: 300px; /* Sidebar width when open */
+  position: fixed; /* Keep sidebar fixed on the screen */
+  border-radius: 20px;
+  top: 140px; /* Align sidebar to the top */
+  right: -320px; /* Initially off-screen (completely hidden) */
+  background-color: rgba(0, 48, 58, 0.8); /* Semi-transparent dark background */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  transition: transform 0.5s ease; /* Smooth transition for transform */
+  padding-top: 20px; /* Space for the top items */
+  display: flex; /* Use flexbox to align content */
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center; /* Align the text to the left */
+  font-size: 30px;
+  padding-left: 20px; /* Space from the left edge */
+  padding-right: 20px; /* Space from the right edge */
+  box-sizing: border-box; /* Ensures padding is included in the element's width and height */
+  z-index: 1000; /* Ensure the sidebar stays on top of other content */
+  box-shadow: 0 0 20px rgba(60, 223, 255, 0.8), 
+              0 0 20px rgba(60, 223, 255, 0.6), 
+              0 0 20px rgba(60, 223, 255, 0.4);
+}
+
+/* Close button (X) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px; /* Align close button to the top */
+  right: 10px; /* Align close button to the right */
+  font-size: 36px; /* Large font size */
+  color: #fff; /* White color */
+  cursor: pointer; /* Pointer cursor on hover */
+  z-index: 1001; /* Ensure the X is above other content */
+}
+
+/* Sidebar links (menu items) */
+.sidebar a {
+  padding: 10px 15px; /* Padding for spacing */
+  text-decoration: none; /* Remove default link styles */
+  font-size: 25px; /* Large font size */
+  color: #fff; /* White color */
+  display: block; /* Block-level element */
+  transition: 0.3s; /* Transition for hover effect */
+  margin-top: 10px; /* Space between the links */
+}
+
+.sidebar h2 {
+  color: #ffffff;
+}
+
+.sidebar h3 {
+  margin-top: 20px;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Hover effect on links */
+.sidebar a:hover {
+  color: #f1f1f1; /* Change text color on hover */
+}
+
+/* Language selector */
+.language-selector button {
+  background-color: #00c7c4;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.language-selector button:hover {
+  background-color: #3ce8ff;
+}
+
+/* Earth image button */
+.image-button img {
+  cursor: pointer;
+  width: 100px; /* Image size */
+  height: auto;
+  border-radius: 10px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
+}
+
+/* Image Container Styling */
+.image-container {
+  text-align: center; /* Center the container */
+  margin: 60px 0; /* 20px spacing on top and bottom of the container */
+}
+
+/* Image Item Styling */
+.image-item {
+  display: inline-block; /* Each image block behaves like inline-block */
+  margin: 0 10px; /* Add 10px margin to space out the images horizontally */
+}
+
+/* Image Styling */
+.image-container a img {
+  width: 100px; /* Fixed image size */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Media Query for Mobile */
 @media screen and (max-width: 768px) {
+  #countdown, #countdownsite, #countdownpublic {
+    font-size: 25px; /* Smaller font for mobile */
+    padding: 8px 15px; /* Adjust padding for mobile */
+    width: 58%; /* Make countdowns more flexible on mobile */
+    margin: 10px auto; /* Center them horizontally */
+  }
+  
   .card {
     width: 90%; /* Responsive width for smaller screens */
-    padding: 2em; /* Reduce padding slightly */
-    margin: 5vh auto;
+    padding: 2.5em; /* Reduce padding slightly */
+    margin: 25vh auto;
   }
 
   .card h1 {
     font-size: 50px; /* Smaller font size for smaller screens */
+  }
+
+  .card h2 {
+    color: #ffffff;
+    font-size: 18px;
   }
 
   .card p {
@@ -135,8 +316,8 @@ html, body {
   }
 
   .rectangles {
-    gap: 15px; /* Smaller gap on mobile */
     justify-content: center; /* Center the rectangles */
+    margin-top: 320px;
   }
 
   .rectangle {
@@ -151,5 +332,23 @@ html, body {
 
   .rectangle p {
     font-size: 16px; /* Adjust description size for mobile */
+  }
+
+  /* Image Container Styling */
+  .image-container {
+   text-align: center; /* Center the container */
+   margin: 60px 0; /* 20px spacing on top and bottom of the container */
+  }
+
+  /* Image Item Styling */
+  .image-item {
+   display: inline-block; /* Each image block behaves like inline-block */
+   margin: 0 10px; /* Add 10px margin to space out the images horizontally */
+  }
+
+  /* Image Styling */
+  .image-container a img {
+   width: 60px; /* Fixed image size */
+   height: auto; /* Maintain aspect ratio */
   }
 }
