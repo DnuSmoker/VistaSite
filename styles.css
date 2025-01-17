@@ -286,69 +286,52 @@ img[src="Earth.jpg"] {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Media Query for Mobile */
 @media screen and (max-width: 768px) {
-  #countdown, #countdownsite, #countdownpublic {
-    font-size: 25px; /* Smaller font for mobile */
-    padding: 8px 15px; /* Adjust padding for mobile */
-    width: 58%; /* Make countdowns more flexible on mobile */
-    margin: 10px auto; /* Center them horizontally */
+  body {
+    background-size: contain; /* Adjust background image size for better mobile fit */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
-  
+
   .card {
-    width: 90%; /* Responsive width for smaller screens */
-    padding: 2.5em; /* Reduce padding slightly */
-    margin: 25vh auto; /* Adjust margin for better positioning */
+    margin: 15vh auto; /* Adjusted margin for better centering */
+    padding: 2em; /* Reduce padding for compact appearance */
   }
 
   .card h1 {
-    font-size: 50px; /* Smaller font size for smaller screens */
+    font-size: 40px; /* Further reduced size for very small screens */
   }
 
-  .card h2 {
-    color: #ffffff;
-    font-size: 18px;
-  }
-
-  .card p {
-    font-size: 18px; /* Adjust font size for smaller screens */
-    line-height: 1.5;
+  #countdown, #countdownsite, #countdownpublic {
+    margin: 15px auto; /* Better spacing on mobile */
   }
 
   .rectangles {
-    justify-content: center; /* Center the rectangles */
-    margin-top: 320px; /* Adjusted margin for smaller screens */
+    flex-direction: column; /* Stack rectangles vertically */
+    align-items: center; /* Center align for better aesthetics */
   }
 
   .rectangle {
-    flex: 1 1 100%; /* Full width on mobile */
-    max-width: 100%;
-    margin: 0 auto; /* Center each rectangle */
+    flex: 1 1 100%; /* Full width for better readability */
+    margin-bottom: 15px; /* Space between stacked rectangles */
   }
 
-  .rectangle h3 {
-    font-size: 32px; /* Adjusted title size for mobile */
+  .sidebar {
+    width: 80%; /* Reduce sidebar width for better usability */
+    right: -85%; /* Ensure it slides fully off-screen */
+    font-size: 20px; /* Smaller font size for links */
+    padding-left: 15px; /* Adjust padding for mobile screens */
+    padding-right: 15px;
   }
 
-  .rectangle p {
-    font-size: 16px; /* Adjust description size for mobile */
+  .sidebar .closebtn {
+    font-size: 30px; /* Slightly smaller close button */
   }
 
-  /* Image Container Styling */
-  .image-container {
-    text-align: center; /* Center the container */
-    margin: 60px 0; /* Adjusted spacing on top and bottom of the container */
+  .sidebar a {
+    font-size: 18px; /* Smaller font size for better readability */
   }
 
-  /* Image Item Styling */
-  .image-item {
-    display: inline-block; /* Each image block behaves like inline-block */
-    margin: 0 10px; /* Add spacing between images horizontally */
-  }
-
-  /* Image Styling */
-  .image-container a img {
-    width: 60px; /* Reduced image size */
-    height: auto; /* Maintain aspect ratio */
+  img[src="Earth.jpg"] {
+    width: 60px; /* Smaller size for mobile */
   }
 }
