@@ -286,52 +286,69 @@ img[src="Earth.jpg"] {
   height: auto; /* Maintain aspect ratio */
 }
 
+/* Media Query for Mobile */
 @media screen and (max-width: 768px) {
-  body {
-    background-size: contain; /* Adjust background image size for better mobile fit */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+  #countdown, #countdownsite, #countdownpublic {
+    font-size: 25px; /* Smaller font for mobile */
+    padding: 8px 15px; /* Adjust padding for mobile */
+    width: 58%; /* Make countdowns more flexible on mobile */
+    margin: 10px auto; /* Center them horizontally */
   }
-
+  
   .card {
-    margin: 15vh auto; /* Adjusted margin for better centering */
-    padding: 2em; /* Reduce padding for compact appearance */
+    width: 90%; /* Responsive width for smaller screens */
+    padding: 2.5em; /* Reduce padding slightly */
+    margin: 25vh auto;
   }
 
   .card h1 {
-    font-size: 40px; /* Further reduced size for very small screens */
+    font-size: 50px; /* Smaller font size for smaller screens */
   }
 
-  #countdown, #countdownsite, #countdownpublic {
-    margin: 15px auto; /* Better spacing on mobile */
+  .card h2 {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    line-height: 1.5;
   }
 
   .rectangles {
-    flex-direction: column; /* Stack rectangles vertically */
-    align-items: center; /* Center align for better aesthetics */
+    justify-content: center; /* Center the rectangles */
+    margin-top: 320px;
   }
 
   .rectangle {
-    flex: 1 1 100%; /* Full width for better readability */
-    margin-bottom: 15px; /* Space between stacked rectangles */
+    flex: 1 1 100%; /* Full width on mobile */
+    max-width: 100%;
+    margin: 0 auto; /* Center each rectangle */
   }
 
-  .sidebar {
-    width: 80%; /* Reduce sidebar width for better usability */
-    right: -85%; /* Ensure it slides fully off-screen */
-    font-size: 20px; /* Smaller font size for links */
-    padding-left: 15px; /* Adjust padding for mobile screens */
-    padding-right: 15px;
+  .rectangle h3 {
+    font-size: 32px; /* Adjusted title size for mobile */
   }
 
-  .sidebar .closebtn {
-    font-size: 30px; /* Slightly smaller close button */
+  .rectangle p {
+    font-size: 16px; /* Adjust description size for mobile */
   }
 
-  .sidebar a {
-    font-size: 18px; /* Smaller font size for better readability */
+  /* Image Container Styling */
+  .image-container {
+   text-align: center; /* Center the container */
+   margin: 60px 0; /* 20px spacing on top and bottom of the container */
   }
 
-  img[src="Earth.jpg"] {
-    width: 60px; /* Smaller size for mobile */
+  /* Image Item Styling */
+  .image-item {
+   display: inline-block; /* Each image block behaves like inline-block */
+   margin: 0 10px; /* Add 10px margin to space out the images horizontally */
+  }
+
+  /* Image Styling */
+  .image-container a img {
+   width: 60px; /* Fixed image size */
+   height: auto; /* Maintain aspect ratio */
   }
 }
