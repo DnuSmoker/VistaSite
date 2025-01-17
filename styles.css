@@ -332,6 +332,6 @@ img[src="Earth.jpg"] {
   }
 
   img[src="Earth.jpg"] {
-    width: 30px; /* Smaller size for mobile */
+    width: 60px; /* Smaller size for mobile */
   }
 }
