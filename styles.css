@@ -348,7 +348,7 @@ img[src="Earth.jpg"] {
 
   /* Image Styling */
   .image-container a img {
-   width: 60px; /* Fixed image size */
+   width: 40px; /* Fixed image size */
    height: auto; /* Maintain aspect ratio */
   }
 }
