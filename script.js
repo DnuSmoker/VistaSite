@@ -51,7 +51,7 @@ updateCountdownSite();
 // Countdown for countdownpublic
 function updateCountdownPublic() {
   const countdownPublicElement = document.getElementById('countdownpublic');
-  const targetDatePublic = new Date('January 17, 2025 20:30:00 GMT+0200').getTime(); // Bucharest timezone
+  const targetDatePublic = new Date('January 18, 2025 20:30:00 GMT+0200').getTime(); // Bucharest timezone
 
   function updateTime() {
     const now = new Date().getTime();
