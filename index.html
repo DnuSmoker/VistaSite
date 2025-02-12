@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <title>VistaStudios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main Content -->
+  <div class="card">
+    <h1 id="title">BUN VENIT</h1>
+    <p id="description">
+      Bun venit pe noul meniu principal unde poți explora diferite lucruri fenomenale! Descoperă aventuri captivante și bucură-te de experiențe unice.
+    </p>
+    <div class="timer">
+      <h2 id="server_opening">DESCHIDEREA SERVER-ULUI DE MINECRAFT!</h2>
+      <div id="countdown">00:00:00</div>
+      <h2 id="site_update">UPDATE LA SITE! | V0.5 ⚙️</h2>
+      <div id="countdownsite">00:00:00</div>
+    </div>
+  </div>
+
+  <!-- Rectangle care trimite la rules.html -->
+  <div class="rules-rectangle" onclick="location.href='rules.html';">
+    <p id="rules_rectangle_text">Regulile Server-ului</p>
+  </div>
+
+  <!-- Rectangles Section -->
+  <div class="rectangles">
+    <div class="rectangle">
+      <h3 id="map">/MAP</h3>
+      <p id="map_description">Official mapa de pe server va fi mult mai detaliata! Vei putea vedea jucatori in timp real, sa vezi unde locuiesc fiecare si multe altele!</p>
+    </div>
+    <div class="rectangle">
+      <h3 id="home">/HOME</h3>
+      <p id="home_description">Ai mai multe locuri mai speciale? Si iti pare rau sa le parasesti? Atunci solutia este aici! Descopera insfarsit optiunea de ati salva casele/locatile favorite! Ca sa te teleportezi oricand doresti.</p>
+    </div>
+    <div class="rectangle">
+      <h3 id="sell">/SELL</h3>
+      <p id="sell_description">Descopera comanda in care poti vinde aproape orice item pentru bani virtuali in joc!</p>
+    </div>
+    <div class="rectangle">
+      <h3 id="settings">/SETTINGS</h3>
+      <p id="settings_description">Preferinte? cu aceasta comanda poti opri/porni unele lucruri in joc (spre exemplu poti opri/opri sunetele de la bloc de note!)</p>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <span class="closebtn" onclick="closeNav()">x</span>
+    <div class="sidebar-title">
+      <h2 id="settings_sidebar">SETĂRI</h2>
+    </div>
+    <div class="language-selector">
+      <h3 id="language_title">| LIMBA |</h3>
+      <button onclick="setLanguage('ro')" id="language_ro">Română</button>
+      <button onclick="setLanguage('en')" id="language_en">English</button>
+    </div>
+  </div>
+
+  <!-- Earth image button -->
+  <div class="image-button">
+    <img src="Earth.jpg" alt="Click me!" onclick="openNav()">
+  </div> 
+
+  <div class="image-container">
+    <div class="image-item">
+      <a href="https://www.youtube.com/@DnuPrime" target="_blank" rel="noopener noreferrer">
+        <img src="youtube.png" alt="Image 1">
+      </a>
+    </div>
+    <div class="image-item">
+      <a href="https://www.instagram.com/dnu_smoker" target="_blank" rel="noopener noreferrer">
+        <img src="instagram.png" alt="Image 2">
+      </a>
+    </div>
+    <div class="image-item">
+      <a href="https://discord.gg/k5dTXwpFJw" target="_blank" rel="noopener noreferrer">
+        <img src="discord.png" alt="Image 3">
+      </a>
+    </div>
+    <div class="image-item">
+      <a href="https://www.tiktok.com/@dnusmoker" target="_blank" rel="noopener noreferrer">
+        <img src="tiktok.png" alt="Image 4">
+      </a>
+    </div>
+  </div>
+    
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
