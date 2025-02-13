@@ -26,7 +26,7 @@ const countdownInterval = setInterval(() => {
 // Countdown for countdownsite
 function updateCountdownSite() {
   const countdownSiteElement = document.getElementById('countdownsite');
-  const targetDateSite = new Date('February 25, 2025 20:00:00 GMT+0200').getTime(); // Bucharest timezone
+  const targetDateSite = new Date('March 5, 2025 20:00:00 GMT+0200').getTime(); // Bucharest timezone
 
   function updateTime() {
     const now = new Date().getTime();
